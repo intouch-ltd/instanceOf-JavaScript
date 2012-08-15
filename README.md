@@ -22,6 +22,11 @@ Primitive types are deemed equivilent to their class
 	instanceOf(String, new String("string")); //true
 	instanceOf("string", "string"); //true
 	instanceOf("string", new String("string")); //true
+	
+Jquery
+------
+There is also a jquery extension for instanceOf, included in the repo as instanceOf.jquery.js, which performs much the same function but wraps the behaviour of jquery.type() so will ignore case for RegExp, Date and Array.
+I will at some point decide which behaviour us more desirable :D
 
 Future Work
 ===========
@@ -29,3 +34,4 @@ Future Work
 - Expand tests
 - Search for more edge cases
 - Further work on optimising the type checking performance
+- Decide whether base or jquery type behaviour is more suitable for the solution and implement one or the other universally.

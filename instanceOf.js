@@ -28,7 +28,7 @@ License along with this library; if not, see <http://www.gnu.org/licenses/lgpl.h
  function instanceOf( className, objectRef){
 	if(typeof objectRef !== 'undefined'){
 		if(objectRef !== null){
-			if(typeof className === 'string'){
+			if(typeof className === 'string'){ //TODO this will not allow for a String object to be passed
 				var classPath = className.split('.'); //allows use of namespacing
 				switch(className.toLowerCase()){ //check primitive types using typeof, cast from upper case to accomodate object wrappers String, Number, Boolean, Function
 					case 'string':
