@@ -21,11 +21,11 @@ License along with this library; if not, see <http://www.gnu.org/licenses/lgpl.h
  * @parent Utilities 
  * @author Andy Wise
  * Checks the type of an object
- * @param {string|function} [className] String - Name of the type to compare against, case insensitve for primative types, function - Constructor of class to compare against, will respect inheritance and wrap primative types
  * @param {object} [objectRef] Object instance to examine, null and undefined will both throw exceptions
+ * @param {string|function} [className] String - Name of the type to compare against, case insensitve for primative types, function - Constructor of class to compare against, will respect inheritance and wrap primative types
  * @return {boolean} true if object is an instance of class, false if not
  */
- function instanceOf( className, objectRef){
+ function instanceOf( objectRef, className ){
 	if(typeof objectRef !== 'undefined'){
 		if(objectRef !== null){
 			if(typeof className === 'string'){ //TODO this will not allow for a String object to be passed

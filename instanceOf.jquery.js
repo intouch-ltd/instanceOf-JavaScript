@@ -21,13 +21,13 @@ License along with this library; if not, see <http://www.gnu.org/licenses/lgpl.h
  * @parent JQuery 
  * @author Andy Wise
  * Checks the type of an object
- * @param {string|function} [className] String - Name of the type to compare against, case insensitve for primative types, function - Constructor of class to compare against, will respect inheritance and wrap primative types
  * @param {object} [objectRef] Object instance to examine, null and undefined will both throw exceptions
+ * @param {string|function} [className] String - Name of the type to compare against, case insensitve for primative types, function - Constructor of class to compare against, will respect inheritance and wrap primative types
  * @return {boolean} true if object is an instance of class, false if not
  */
  (function($) {
 	 $.extend({
-		 instanceOf : function( className, objectRef){
+		 instanceOf : function( objectRef, className ){
 			var jqueryTypeName = $.type(objectRef);
 			if(jqueryTypeName !== 'undefined'){
 				if(jqueryTypeName !== 'null'){

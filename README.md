@@ -7,21 +7,21 @@ API
 =====================
 Ordinary Usage - passing a string in for the class name. Class name may be namespaced such as "collections.dictionary".
 
-	boolean instanceOf({string} class name, {object} object to examine)
+	boolean instanceOf({object} object to examine, {string} class name)
 
 Alternatively - pass in the class constructor
 	
-	boolean instanceOf({function} class constructor, {object} object to examine)
+	boolean instanceOf({object} object to examine, {function} class constructor)
 
 Currently the function can only check for globally scoped or globally namespaced classes. Inline class definitions are permitted provided they are accessible from a window/global level scope or namespace.
 
 All primitive types are supported, as are native classes such as Date and Array, in addition to user-defined classes.
 Primitive types are deemed equivilent to their class
 
-	instanceOf(String, "string"); //true
-	instanceOf(String, new String("string")); //true
+	instanceOf("string", String); //true
+	instanceOf(new String("string"), String); //true
 	instanceOf("string", "string"); //true
-	instanceOf("string", new String("string")); //true
+	instanceOf(new String("string"), "string"); //true
 	
 Jquery
 ------
